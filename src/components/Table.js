@@ -2,8 +2,8 @@ import {TableHead, tableColumns} from './TableHead.js'
 
 export const Table = ({data}) => {
   return (
-    <div className = 'table'>
-      <table>
+    <div className = 'table-container'>
+      <table className = 'table table-hover'>
         <TableHead />
         <tbody>
           {data.map((dataObj,ind) =>
