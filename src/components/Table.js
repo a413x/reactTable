@@ -1,10 +1,10 @@
 import {TableHead, tableColumns} from './TableHead.js'
 
-export const Table = ({data}) => {
+export const Table = ({data, sortCallback}) => {
   return (
     <div className = 'table-container'>
       <table className = 'table table-hover'>
-        <TableHead />
+        <TableHead sortCallback = {sortCallback} />
         <tbody>
           {data.map((dataObj,ind) =>
             <tr key = {'tr-' + ind}>

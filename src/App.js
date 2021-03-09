@@ -1,7 +1,9 @@
+import {useState} from 'react'
 import {Table} from './components/Table.js'
+import {sortData} from './utils/utils.js'
 import './styles/App.css';
 
-const data = [
+const mock_data = [
   {
     id : 1,
     firstName : 'A',
@@ -13,15 +15,22 @@ const data = [
     id : 2,
     firstName : 'C',
     lastName: 'D',
-    email: 'example@example.com',
-    phone: '12345678'
+    email: 'example@example1.com',
+    phone: '123456789'
   }
 ]
 
 const App = () => {
+  const [data, setData] = useState(mock_data)
+
+  const sortCallback = (colObj, order) => {
+    const sortedData = sortData(data, colObj.name, order)
+    setData(sortedData)
+  }
+
   return (
     <div className="app">
-      <Table data = {data} />
+      <Table data = {data} sortCallback = {sortCallback}/>
     </div>
   );
 }
