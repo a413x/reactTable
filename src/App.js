@@ -1,5 +1,5 @@
 import {Table} from './components/Table.js'
-import './App.css';
+import './styles/App.css';
 
 const data = [
   {
