@@ -8,3 +8,10 @@ export const sortData = (data, colName, order) => {
   })
   return sortedData
 }
+
+export const getData = (url, callback) => {
+  fetch(url)
+    .then(resp => resp.json())
+    .then(data => callback(data))
+    .catch(err => console.log(err))
+}

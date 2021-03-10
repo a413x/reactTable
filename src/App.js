@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import {Table} from './components/Table.js'
+import {LoadData} from './components/LoadData.js'
 import {sortData} from './utils/utils.js'
 import './styles/App.css';
 
@@ -28,8 +29,13 @@ const App = () => {
     setData(sortedData)
   }
 
+  const loadCallback = (data) => {
+    setData(data)
+  }
+
   return (
     <div className="app">
+      <LoadData loadCallback = {loadCallback} />
       <Table data = {data} sortCallback = {sortCallback}/>
     </div>
   );
