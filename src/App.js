@@ -23,6 +23,7 @@ const App = () => {
     if(filtered.length === storedData.length) {
       setData(storedData)
     }
+    setPage(1)
     setData(filtered)
   }
 
@@ -37,7 +38,10 @@ const App = () => {
     setPage(newPage)
   }
 
-  const rowsNumChangeCallback = newRowsNum => setRowsOnPage(newRowsNum)
+  const rowsNumChangeCallback = newRowsNum => {
+    setPage(1)
+    setRowsOnPage(newRowsNum)
+  }
 
   const from = (page-1)*rowsOnPage;
   const dataToShow = data.slice(from, from + rowsOnPage)
