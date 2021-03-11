@@ -2,11 +2,14 @@ import {useState} from 'react'
 import {Table} from './components/Table.js'
 import {LoadData} from './components/LoadData.js'
 import {PagesNav} from './components/PagesNav.js'
-import {sortData} from './utils/utils.js'
+import {SearchForm} from './components/SearchForm.js'
+import {sortData, searchData} from './utils/utils.js'
 import './styles/App.css';
 
+let storedData = []
+
 const App = () => {
-  const [data, setData] = useState([])
+  const [data, setData] = useState([...storedData])
   const [page, setPage] = useState(1)
   const [rowsOnPage, setRowsOnPage] = useState(5)
 
@@ -15,7 +18,18 @@ const App = () => {
     setData(sortedData)
   }
 
-  const loadCallback = data => setData(data)
+  const searchCallback = search => {
+    const filtered = searchData(storedData, search)
+    if(filtered.length === storedData.length) {
+      setData(storedData)
+    }
+    setData(filtered)
+  }
+
+  const loadCallback = data => {
+    storedData = [...data]
+    setData(data)
+  }
 
   const pagesCount = Math.ceil(data.length/rowsOnPage)
   const pageChangeCallback = newPage => {
@@ -31,6 +45,7 @@ const App = () => {
   return (
     <div className="app">
       <LoadData loadCallback = {loadCallback} />
+      <SearchForm searchCallback = {searchCallback} />
       <Table data = {dataToShow} sortCallback = {sortCallback}/>
       <PagesNav
         page = {page} rowsOnPage = {rowsOnPage}

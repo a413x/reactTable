@@ -9,6 +9,18 @@ export const sortData = (data, colName, order) => {
   return sortedData
 }
 
+export const searchData = (data, searchStr) => {
+  return data.filter(dataObj => {
+    for(let key in dataObj){
+      if(key === 'description'){
+        continue
+      }
+      if((dataObj[key] + '').toLowerCase().includes(searchStr)) return true
+    }
+    return false
+  })
+}
+
 export const getData = (url, callback) => {
   fetch(url)
     .then(resp => resp.json())
