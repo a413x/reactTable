@@ -2,7 +2,7 @@ import {TableHead, tableColumns} from './TableHead.js'
 
 export const Table = ({data, sortCallback}) => {
   return (
-    <div className = 'table-container'>
+    <div className = 'table-container container'>
       <table className = 'table table-hover'>
         <TableHead sortCallback = {sortCallback} />
         <tbody>

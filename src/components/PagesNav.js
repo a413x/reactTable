@@ -8,7 +8,7 @@ export const PagesNav = ({
   const nextEnable = (page !== pagesCount)
 
   return (
-    <div className = 'pages-nav-container d-flex'>
+    <div className = 'container d-flex'>
       <button
         className = 'btn btn-light'
         onClick = {() => onPageChange(page - 1)}
@@ -21,6 +21,7 @@ export const PagesNav = ({
           <label>Page</label>
           <input
             className = 'form-control m-2'
+            style = {{width: '100px'}}
             type = 'number'
             onChange = {e => onPageChange(+e.target.value)}
             value = {page}

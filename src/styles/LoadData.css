@@ -1,0 +1,7 @@
+.load-data-container{
+  display: flex;
+  align-items: center;
+}
+.load-data-container button{
+  width: 80px;
+}
