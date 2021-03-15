@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import {Table} from './components/Table.js'
 import {LoadData} from './components/LoadData.js'
+import {AddForm} from './components/AddForm.js'
 import {PagesNav} from './components/PagesNav.js'
 import {SearchForm} from './components/SearchForm.js'
 import {sortData, searchData} from './utils/utils.js'
@@ -32,6 +33,12 @@ const App = () => {
     setData(data)
   }
 
+  const addCallback = dataObj => {
+    const newData = [...data]
+    newData.push(dataObj)
+    setData(newData)
+  }
+
   const pagesCount = Math.ceil(data.length/rowsOnPage)
   const pageChangeCallback = newPage => {
     if(newPage < 1 || newPage > pagesCount) return
@@ -49,6 +56,7 @@ const App = () => {
   return (
     <div className="app">
       <LoadData loadCallback = {loadCallback} />
+      <AddForm addCallback = {addCallback} />
       <SearchForm searchCallback = {searchCallback} />
       <Table data = {dataToShow} sortCallback = {sortCallback}/>
       <PagesNav
