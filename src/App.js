@@ -4,8 +4,9 @@ import {LoadData} from './components/LoadData.js'
 import {AddForm} from './components/AddForm.js'
 import {PagesNav} from './components/PagesNav.js'
 import {SearchForm} from './components/SearchForm.js'
+import {Details} from './components/Details.js'
 import {sortData, searchData} from './utils/utils.js'
-import './styles/App.css';
+import './styles/App.css'
 
 let storedData = []
 
@@ -13,6 +14,7 @@ const App = () => {
   const [data, setData] = useState([...storedData])
   const [page, setPage] = useState(1)
   const [rowsOnPage, setRowsOnPage] = useState(5)
+  const [selectedData, setSelectedData] = useState(null)
 
   const sortCallback = (colObj, order) => {
     const sortedData = sortData(data, colObj.name, order)
@@ -50,7 +52,10 @@ const App = () => {
     setRowsOnPage(newRowsNum)
   }
 
-  const from = (page-1)*rowsOnPage;
+  const showDetailsCallback = dataObj => setSelectedData({...dataObj})
+  const closeDetailsCallback = () => setSelectedData(null)
+
+  const from = (page-1)*rowsOnPage
   const dataToShow = data.slice(from, from + rowsOnPage)
 
   return (
@@ -58,15 +63,25 @@ const App = () => {
       <LoadData loadCallback = {loadCallback} />
       <AddForm addCallback = {addCallback} />
       <SearchForm searchCallback = {searchCallback} />
-      <Table data = {dataToShow} sortCallback = {sortCallback}/>
+      <Table
+        data = {dataToShow}
+        sortCallback = {sortCallback}
+        showDetailsCallback = {showDetailsCallback}
+      />
       <PagesNav
         page = {page} rowsOnPage = {rowsOnPage}
         pagesCount = {pagesCount}
         pageChangeCallback = {pageChangeCallback}
         rowsNumChangeCallback = {rowsNumChangeCallback}
       />
+      {selectedData &&
+        <Details
+          dataObj = {selectedData}
+          closeDetailsCallback = {closeDetailsCallback}
+        />
+      }
     </div>
-  );
+  )
 }
 
 export default App

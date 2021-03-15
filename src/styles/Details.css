@@ -1,0 +1,8 @@
+.details{
+  position: relative;
+}
+.details .close{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
