@@ -59,7 +59,7 @@ const App = () => {
   const dataToShow = data.slice(from, from + rowsOnPage)
 
   return (
-    <div className="app">
+    <div className = 'app container'>
       <LoadData loadCallback = {loadCallback} />
       <AddForm addCallback = {addCallback} />
       <SearchForm searchCallback = {searchCallback} />

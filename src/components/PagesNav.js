@@ -8,7 +8,7 @@ export const PagesNav = ({
   const nextEnable = (page !== pagesCount)
 
   return (
-    <div className = 'container d-flex'>
+    <div className = 'pages-nav d-flex'>
       <button
         className = 'btn btn-light'
         onClick = {() => onPageChange(page - 1)}

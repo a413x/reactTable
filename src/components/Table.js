@@ -3,7 +3,7 @@ import {TableHead, tableColumns} from './TableHead.js'
 export const Table = ({data, sortCallback, showDetailsCallback}) => {
   const onRowClick = (dataObj) => showDetailsCallback(dataObj)
   return (
-    <div className = 'table-container container'>
+    <div className = 'table'>
       <table className = 'table table-hover'>
         <TableHead sortCallback = {sortCallback} />
         <tbody>

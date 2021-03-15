@@ -28,7 +28,7 @@ export const AddForm = ({addCallback}) => {
   for(let colName in inputsValid){ allValid &= inputsValid[colName] }
 
   return (
-    <div className = 'container'>
+    <div className = 'add-form'>
       <button className = 'btn btn-info' onClick = {toggleForm}>
         Add
       </button>

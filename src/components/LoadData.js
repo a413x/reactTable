@@ -18,7 +18,7 @@ export const LoadData = ({loadCallback}) => {
   }
 
   return (
-    <div className = 'load-data-container container mt-3'>
+    <div className = 'load-data mt-3'>
       <span className = 'mr-3'>
         Load data:
       </span>

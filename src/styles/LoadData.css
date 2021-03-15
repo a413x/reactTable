@@ -1,7 +1,7 @@
-.load-data-container{
+.load-data{
   display: flex;
   align-items: center;
 }
-.load-data-container button{
+.load-data button{
   width: 80px;
 }
