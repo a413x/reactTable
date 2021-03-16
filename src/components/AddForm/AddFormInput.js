@@ -1,4 +1,4 @@
-import {validate} from '../utils/validate.js'
+import {validate} from '../../utils/validate.js'
 
 export const AddFormInput = ({
   colName, addingChange, validChange, valid

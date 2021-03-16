@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import '../styles/TableHead.css'
+import './TableHead.css'
 
 export const tableColumns = [
   {name: 'id', title: '#'},

@@ -1,4 +1,4 @@
-import '../styles/Details.css'
+import './Details.css'
 
 export const Details = ({dataObj, closeDetailsCallback}) => {
   const {firstName, lastName, description, address} = dataObj

@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import {tableColumns} from './TableHead.js'
+import {tableColumns} from '../Table/TableHead.js'
 import {AddFormInput} from './AddFormInput.js'
 
 const objectToAdd = {}

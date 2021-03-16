@@ -1,12 +1,11 @@
 import {useState} from 'react'
-import {Table} from './components/Table.js'
-import {LoadData} from './components/LoadData.js'
-import {AddForm} from './components/AddForm.js'
-import {PagesNav} from './components/PagesNav.js'
-import {SearchForm} from './components/SearchForm.js'
-import {Details} from './components/Details.js'
-import {sortData, searchData} from './utils/utils.js'
-import './styles/App.css'
+import {Table} from '../Table/Table.js'
+import {LoadData} from '../LoadData/LoadData.js'
+import {AddForm} from '../AddForm/AddForm.js'
+import {PagesNav} from '../PagesNav/PagesNav.js'
+import {SearchForm} from '../SearchForm/SearchForm.js'
+import {Details} from '../Details/Details.js'
+import {sortData, searchData} from '../../utils/utils.js'
 
 let storedData = []
 
