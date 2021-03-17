@@ -15,7 +15,9 @@ export const searchData = (data, searchStr) => {
       if(key === 'description'){
         continue
       }
-      if((dataObj[key] + '').toLowerCase().includes(searchStr)) return true
+      if((dataObj[key] + '').toLowerCase().includes(searchStr.toLowerCase())){
+        return true
+      }
     }
     return false
   })
