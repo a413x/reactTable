@@ -1,18 +1,14 @@
 import {render, fireEvent} from '@testing-library/react'
 import {AddForm} from './AddForm.js'
+import {mock_data} from '../../test/mock_data.js'
 
 describe('AddForm component tests', () => {
   const mock_addCallback = jest.fn()
   const props = {
     addCallback: mock_addCallback
   }
-  const objectToAdd = {
-    id: '1',
-    firstName: 'name',
-    lastName: 'lastname',
-    email: 'example@example.com',
-    phone: '11111111111'
-  }
+  const objectToAdd = {...mock_data[4]}
+
   const setAllInputs = (inputs) => {
     let index = 0
     for(let colName in objectToAdd){
