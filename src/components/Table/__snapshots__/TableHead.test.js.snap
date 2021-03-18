@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TableHead component tests renders properly 1`] = `
+<table>
+  <thead>
+    <tr>
+      <th
+        class=""
+      >
+        #
+      </th>
+      <th
+        class=""
+      >
+        First name
+      </th>
+      <th
+        class=""
+      >
+        Last name
+      </th>
+      <th
+        class=""
+      >
+        E-mail
+      </th>
+      <th
+        class=""
+      >
+        Phone
+      </th>
+    </tr>
+  </thead>
+</table>
+`;
