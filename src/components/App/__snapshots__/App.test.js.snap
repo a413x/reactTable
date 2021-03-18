@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component tests renders properly 1`] = `
+<div>
+  <div
+    class="app container"
+  >
+    <div
+      class="load-data mt-3"
+    >
+      <span
+        class="mr-3"
+      >
+        Load data:
+      </span>
+      <button
+        class="btn btn-primary mr-3"
+      >
+        Small
+      </button>
+      <button
+        class="btn btn-primary"
+      >
+        Big
+      </button>
+    </div>
+    <div
+      class="add-form"
+    >
+      <button
+        class="btn btn-info"
+      >
+        Add
+      </button>
+    </div>
+    <div
+      class="search-form my-3"
+    >
+      <form
+        class="form-inline"
+      >
+        <label>
+          Search:
+        </label>
+        <input
+          class="form-control mx-2"
+          type="search"
+        />
+      </form>
+    </div>
+    <div
+      class="table"
+    >
+      <table
+        class="table table-hover"
+      >
+        <thead>
+          <tr>
+            <th
+              class=""
+            >
+              #
+            </th>
+            <th
+              class=""
+            >
+              First name
+            </th>
+            <th
+              class=""
+            >
+              Last name
+            </th>
+            <th
+              class=""
+            >
+              E-mail
+            </th>
+            <th
+              class=""
+            >
+              Phone
+            </th>
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+    </div>
+    <div
+      class="pages-nav d-flex"
+    >
+      <button
+        class="btn btn-light"
+        disabled=""
+      >
+        ◀
+      </button>
+      <nav
+        class="d-flex w-100 justify-content-around"
+      >
+        <form
+          class="form-inline"
+        >
+          <label>
+            Page
+          </label>
+          <input
+            class="form-control m-2"
+            style="width: 100px;"
+            type="number"
+            value="1"
+          />
+          <label>
+            of 
+            0
+          </label>
+        </form>
+        <form
+          class="form-inline"
+        >
+          <label
+            class="mr-2"
+          >
+            Rows on page:
+          </label>
+          <select>
+            <option>
+              5
+            </option>
+            <option>
+              10
+            </option>
+            <option>
+              50
+            </option>
+          </select>
+        </form>
+      </nav>
+      <button
+        class="btn btn-light"
+      >
+        ▶
+      </button>
+    </div>
+  </div>
+</div>
+`;
