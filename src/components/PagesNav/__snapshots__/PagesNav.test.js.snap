@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PagesNav component tests renders properly 1`] = `
+<div>
+  <div
+    class="pages-nav d-flex"
+  >
+    <button
+      class="btn btn-light"
+      disabled=""
+    >
+      ◀
+    </button>
+    <nav
+      class="d-flex w-100 justify-content-around"
+    >
+      <form
+        class="form-inline"
+      >
+        <label>
+          Page
+        </label>
+        <input
+          class="form-control m-2"
+          style="width: 100px;"
+          type="number"
+          value="1"
+        />
+        <label>
+          of 
+          5
+        </label>
+      </form>
+      <form
+        class="form-inline"
+      >
+        <label
+          class="mr-2"
+        >
+          Rows on page:
+        </label>
+        <select>
+          <option>
+            5
+          </option>
+          <option>
+            10
+          </option>
+          <option>
+            50
+          </option>
+        </select>
+      </form>
+    </nav>
+    <button
+      class="btn btn-light"
+    >
+      ▶
+    </button>
+  </div>
+</div>
+`;
