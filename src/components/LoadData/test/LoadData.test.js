@@ -1,6 +1,5 @@
 import {render, fireEvent, waitFor} from '@testing-library/react'
 import {LoadData} from '../LoadData.js'
-import {mock_data} from '../../test/mock_data.js'
 
 describe('LoadData component tests', () => {
   const mock_loadCallback = jest.fn()

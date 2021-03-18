@@ -1,5 +1,4 @@
 import {sortData, searchData, getData} from '../utils.js'
-import {mock_data} from '../../test/mock_data.js'
 
 describe('Sort data function tests', () => {
   const shuffle = (array) => array.sort(() => Math.random() - 0.5)

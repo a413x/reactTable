@@ -1,6 +1,5 @@
 import {render, fireEvent, screen} from '@testing-library/react'
 import {PagesNav} from '../PagesNav.js'
-import {mock_data} from '../../test/mock_data.js'
 
 describe('PagesNav component tests', () => {
   const mock_pageChangeCallback = jest.fn()

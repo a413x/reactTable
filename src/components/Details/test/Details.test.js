@@ -1,6 +1,5 @@
 import {render, fireEvent} from '@testing-library/react'
 import {Details} from '../Details.js'
-import {mock_data} from '../../test/mock_data.js'
 
 describe('Details component tests', () => {
   const mock_closeDetailsCallback = jest.fn()
