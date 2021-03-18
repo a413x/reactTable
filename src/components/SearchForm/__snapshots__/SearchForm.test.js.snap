@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm component tests renders properly 1`] = `
+<div>
+  <div
+    class="search-form my-3"
+  >
+    <form
+      class="form-inline"
+    >
+      <label>
+        Search:
+      </label>
+      <input
+        class="form-control mx-2"
+        type="search"
+      />
+    </form>
+  </div>
+</div>
+`;
