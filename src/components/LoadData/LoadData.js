@@ -11,10 +11,16 @@ export const LoadData = ({loadCallback}) => {
   const onBtnClick = (type) => {
     const url = type === 'small' ? urlSmallData : urlBigData
     setLoading(true)
-    getData(url, (data) => {
-      setLoading(false)
-      loadCallback(data)
-    })
+    getData(url,
+      (data) => {
+        setLoading(false)
+        loadCallback(data)
+      },
+      (err) => {
+        setLoading(false)
+        alert('Connection error')
+      }
+    )
   }
 
   return (

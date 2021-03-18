@@ -23,9 +23,9 @@ export const searchData = (data, searchStr) => {
   })
 }
 
-export const getData = (url, callback) => {
+export const getData = (url, successCallback, errorCallback) => {
   fetch(url)
     .then(resp => resp.json())
-    .then(data => callback(data))
-    .catch(err => console.log(err))
+    .then(data => successCallback(data))
+    .catch(err => errorCallback(err))
 }
