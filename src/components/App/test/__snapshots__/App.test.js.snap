@@ -83,7 +83,93 @@ exports[`App component tests renders properly 1`] = `
             </th>
           </tr>
         </thead>
-        <tbody />
+        <tbody>
+          <tr>
+            <td>
+              1
+            </td>
+            <td>
+              Frederick
+            </td>
+            <td>
+              Catania
+            </td>
+            <td>
+              GHellems@magna.net
+            </td>
+            <td>
+              (458)969-6847
+            </td>
+          </tr>
+          <tr>
+            <td>
+              2
+            </td>
+            <td>
+              Curtis
+            </td>
+            <td>
+              Bias
+            </td>
+            <td>
+              CRobichaud@nec.gov
+            </td>
+            <td>
+              (481)075-5034
+            </td>
+          </tr>
+          <tr>
+            <td>
+              3
+            </td>
+            <td>
+              Dora
+            </td>
+            <td>
+              Crenshaw
+            </td>
+            <td>
+              MSanchez@at.org
+            </td>
+            <td>
+              (959)257-7541
+            </td>
+          </tr>
+          <tr>
+            <td>
+              4
+            </td>
+            <td>
+              Grace
+            </td>
+            <td>
+              French
+            </td>
+            <td>
+              JLund@vestibulum.com
+            </td>
+            <td>
+              (976)555-7134
+            </td>
+          </tr>
+          <tr>
+            <td>
+              5
+            </td>
+            <td>
+              Randy
+            </td>
+            <td>
+              Bunch
+            </td>
+            <td>
+              KGunter@lacus.io
+            </td>
+            <td>
+              (941)539-5519
+            </td>
+          </tr>
+        </tbody>
       </table>
     </div>
     <div
@@ -112,7 +198,7 @@ exports[`App component tests renders properly 1`] = `
           />
           <label>
             of 
-            0
+            1
           </label>
         </form>
         <form
@@ -138,6 +224,7 @@ exports[`App component tests renders properly 1`] = `
       </nav>
       <button
         class="btn btn-light"
+        disabled=""
       >
         ▶
       </button>

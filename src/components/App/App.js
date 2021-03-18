@@ -6,8 +6,9 @@ import {PagesNav} from '../PagesNav/PagesNav.js'
 import {SearchForm} from '../SearchForm/SearchForm.js'
 import {Details} from '../Details/Details.js'
 import {sortData, searchData} from '../../utils/utils.js'
+import {mock_data} from '../../__mock_data__/mock_data.js'
 
-let storedData = []
+let storedData = [...mock_data]
 
 const App = () => {
   const [data, setData] = useState([...storedData])
