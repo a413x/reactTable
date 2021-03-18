@@ -1,4 +1,5 @@
 import {TableHead, tableColumns} from './TableHead.js'
+import './Table.css'
 
 export const Table = ({data, sortCallback, showDetailsCallback}) => {
   const onRowClick = (dataObj) => showDetailsCallback(dataObj)

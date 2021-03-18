@@ -1,7 +1,18 @@
-th{
+.table th{
   position: relative;
   cursor: pointer;
   user-select: none;
+  overflow: hidden;
+  width: 16%;
+}
+.table th:first-child{
+  width: 8%;
+}
+.table th:nth-child(0n+4){
+  width: 36%;
+}
+.table th:last-child{
+  width: 24%;
 }
 .asc:after,.desc:after{
   content: '';
@@ -14,4 +25,9 @@ th{
 }
 .desc:after{
   border-width: 0 5px 5px;
+}
+@media (min-width: 576px) {
+  .table th{
+    overflow: visible;
+  }
 }
