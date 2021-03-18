@@ -1,5 +1,5 @@
 import {render, fireEvent} from '@testing-library/react'
-import {Table} from './Table.js'
+import {Table} from '../Table.js'
 import {mock_data} from '../../test/mock_data.js'
 
 describe('Table component tests', () => {

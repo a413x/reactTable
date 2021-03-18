@@ -1,5 +1,5 @@
 import {render, fireEvent} from '@testing-library/react'
-import {AddFormInput} from './AddFormInput.js'
+import {AddFormInput} from '../AddFormInput.js'
 
 describe('AddFormInput component tests', () => {
   const colName = 'id'

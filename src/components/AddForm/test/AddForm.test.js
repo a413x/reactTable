@@ -1,5 +1,5 @@
 import {render, fireEvent} from '@testing-library/react'
-import {AddForm} from './AddForm.js'
+import {AddForm} from '../AddForm.js'
 import {mock_data} from '../../test/mock_data.js'
 
 describe('AddForm component tests', () => {

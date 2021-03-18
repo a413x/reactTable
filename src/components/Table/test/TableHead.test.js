@@ -1,5 +1,5 @@
 import {render, fireEvent} from '@testing-library/react'
-import {TableHead, tableColumns} from './TableHead.js'
+import {TableHead, tableColumns} from '../TableHead.js'
 
 describe('TableHead component tests', () => {
   const mock_sortCallback = jest.fn()

@@ -1,5 +1,5 @@
 import {render, fireEvent} from '@testing-library/react'
-import {SearchForm} from './SearchForm.js'
+import {SearchForm} from '../SearchForm.js'
 
 describe('SearchForm component tests', () => {
   const mock_searchCallback = jest.fn()
