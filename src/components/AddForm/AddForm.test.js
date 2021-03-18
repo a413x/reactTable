@@ -18,7 +18,7 @@ describe('AddForm component tests', () => {
   }
 
   test('renders properly', () => {
-    const container = render(<AddForm {...props} />)
+    const {container} = render(<AddForm {...props} />)
     expect(container).toMatchSnapshot()
   })
 

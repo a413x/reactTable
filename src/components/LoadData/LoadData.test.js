@@ -6,7 +6,7 @@ describe('LoadData component tests', () => {
   const mock_loadCallback = jest.fn()
 
   test('renders properly', () => {
-    const container = render(<LoadData loadCallback = {mock_loadCallback} />)
+    const {container} = render(<LoadData loadCallback = {mock_loadCallback} />)
     expect(container).toMatchSnapshot()
   })
 

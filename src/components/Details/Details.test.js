@@ -9,12 +9,12 @@ describe('Details component tests', () => {
     closeDetailsCallback: mock_closeDetailsCallback
   }
   test('renders properly', () => {
-    const container = render(<Details {...props} />)
+    const {container} = render(<Details {...props} />)
     expect(container).toMatchSnapshot()
   })
   test('renders properly without address and description', () => {
     props.dataObj = {...mock_data[4]}
-    const container = render(<Details {...props} />)
+    const {container} = render(<Details {...props} />)
     expect(container).toMatchSnapshot()
   })
   test('Close button calls close callback function', () => {

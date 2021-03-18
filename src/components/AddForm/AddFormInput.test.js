@@ -15,13 +15,13 @@ describe('AddFormInput component tests', () => {
   }
 
   test('renders properly', () => {
-    const container = render(<AddFormInput {...props} />)
+    const {container} = render(<AddFormInput {...props} />)
     expect(container).toMatchSnapshot()
   })
 
   test('renders properly with true valid prop', () => {
     props.valid = true
-    const container = render(<AddFormInput {...props} />)
+    const {container} = render(<AddFormInput {...props} />)
     expect(container).toMatchSnapshot()
   })
 
