@@ -18,6 +18,7 @@ const App = () => {
 
   const sortCallback = (colObj, order) => {
     const sortedData = sortData(data, colObj.name, order)
+    storedData = sortData(storedData, colObj.name, order)
     setData(sortedData)
   }
 
