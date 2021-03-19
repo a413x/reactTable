@@ -15,11 +15,13 @@ const App = () => {
   const [page, setPage] = useState(1)
   const [rowsOnPage, setRowsOnPage] = useState(5)
   const [selectedData, setSelectedData] = useState(null)
+  const [sortedCol, setSortedCol] = useState({name: '', order: ''})
 
-  const sortCallback = (colObj, order) => {
+  const sortCallback = (colObj, order, newSortedCol) => {
     const sortedData = sortData(data, colObj.name, order)
     storedData = sortData(storedData, colObj.name, order)
     setData(sortedData)
+    setSortedCol({name: colObj.name, order: order})
   }
 
   const searchCallback = search => {
@@ -33,6 +35,7 @@ const App = () => {
 
   const loadCallback = data => {
     storedData = [...data]
+    setSortedCol({name: '', order: ''})
     setData(data)
   }
 
@@ -66,6 +69,7 @@ const App = () => {
       <SearchForm searchCallback = {searchCallback} />
       <Table
         data = {dataToShow}
+        sortedCol = {sortedCol}
         sortCallback = {sortCallback}
         showDetailsCallback = {showDetailsCallback}
       />

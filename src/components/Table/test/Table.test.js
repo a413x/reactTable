@@ -6,6 +6,7 @@ describe('Table component tests', () => {
   const mock_showDetailsCallback = jest.fn()
   const props = {
     data: [...mock_data],
+    sortedCol: {},
     sortCallback: mock_sortCallback,
     showDetailsCallback: mock_showDetailsCallback
   }

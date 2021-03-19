@@ -1,4 +1,3 @@
-import {useState} from 'react'
 import './TableHead.css'
 
 export const tableColumns = [
@@ -9,17 +8,13 @@ export const tableColumns = [
   {name: 'phone', title: 'Phone'},
 ]
 
-export const TableHead = ({sortCallback}) => {
-  const [activeCol, setActiveCol] = useState({name: '', order: 'asc'})
-
+export const TableHead = ({sortCallback, sortedCol}) => {
   const onClick = (colObj) => {
-    let order = activeCol.order
-    if(activeCol.name === colObj.name){
+    let order = sortedCol.order
+    if(!order) order = 'asc'
+    if(sortedCol.name === colObj.name){
       order = order === 'asc' ? 'desc' : 'asc'
-    }else{
-      order = 'asc'
     }
-    setActiveCol({name: colObj.name, order: order})
     sortCallback(colObj, order)
   }
 
@@ -31,7 +26,7 @@ export const TableHead = ({sortCallback}) => {
             key = {'th-' + ind}
             onClick = {() => onClick(colObj)}
             className = {
-              activeCol.name === colObj.name ? activeCol.order : ''
+              colObj.name === sortedCol.name ? sortedCol.order : ''
             }
           >
             {colObj.title}
