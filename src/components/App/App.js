@@ -42,6 +42,7 @@ const App = () => {
   const addCallback = dataObj => {
     const newData = [...data]
     newData.push(dataObj)
+    storedData.push(dataObj)
     setData(newData)
   }
 
