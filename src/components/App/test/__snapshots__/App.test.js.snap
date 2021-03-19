@@ -36,7 +36,7 @@ exports[`App component tests renders properly 1`] = `
     <div
       class="search-form my-3"
     >
-      <form
+      <div
         class="form-inline"
       >
         <label>
@@ -46,7 +46,7 @@ exports[`App component tests renders properly 1`] = `
           class="form-control mx-2"
           type="search"
         />
-      </form>
+      </div>
     </div>
     <div
       class="table"
@@ -184,7 +184,7 @@ exports[`App component tests renders properly 1`] = `
       <nav
         class="d-flex w-100 justify-content-around"
       >
-        <form
+        <div
           class="form-inline"
         >
           <label>
@@ -200,8 +200,8 @@ exports[`App component tests renders properly 1`] = `
             of 
             1
           </label>
-        </form>
-        <form
+        </div>
+        <div
           class="form-inline"
         >
           <label
@@ -220,7 +220,7 @@ exports[`App component tests renders properly 1`] = `
               50
             </option>
           </select>
-        </form>
+        </div>
       </nav>
       <button
         class="btn btn-light"

@@ -17,7 +17,7 @@ export const PagesNav = ({
         ◀
       </button>
       <nav className = 'd-flex w-100 justify-content-around'>
-        <form className = 'form-inline'>
+        <div className = 'form-inline'>
           <label>Page</label>
           <input
             className = 'form-control m-2'
@@ -27,15 +27,15 @@ export const PagesNav = ({
             value = {page}
           />
           <label>of {pagesCount}</label>
-        </form>
-        <form className = 'form-inline'>
+        </div>
+        <div className = 'form-inline'>
           <label className = 'mr-2'>Rows on page:</label>
           <select onChange = {e => onRowsNumChange(+e.target.value)}>
             <option>5</option>
             <option>10</option>
             <option>50</option>
           </select>
-        </form>
+        </div>
       </nav>
       <button
         className = 'btn btn-light'

@@ -5,7 +5,7 @@ exports[`SearchForm component tests renders properly 1`] = `
   <div
     class="search-form my-3"
   >
-    <form
+    <div
       class="form-inline"
     >
       <label>
@@ -15,7 +15,7 @@ exports[`SearchForm component tests renders properly 1`] = `
         class="form-control mx-2"
         type="search"
       />
-    </form>
+    </div>
   </div>
 </div>
 `;
